@@ -41,3 +41,11 @@ india %>%
   geom_point()+
   coord_flip()
 ggsave("punjab.png")
+
+india %>%
+  filter (STATE_UT_NAME == "RAJASTHAN") %>%
+  ggplot(aes(x = DISTRICT,
+             y = ANNUAL))+
+  geom_point()+
+  coord_flip()
+ggsave("rajasthan.png")
